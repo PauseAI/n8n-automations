@@ -8,4 +8,15 @@ We used to use Zapier, but migrated to n8n early 2025.
 
 ## Instance
 
-- Hosted on DigitalOcean, managed by Joep Meindertsma
+- Hosted on DigitalOcean, managed by Joep Meindertsma 
+
+### Upgrading n8n
+
+Log in to [the droplet console](https://cloud.digitalocean.com/droplets/502581104/graphs?i=4e6187&period=hour) and execute these commands: 
+
+```sh
+cd /opt/n8n-docker-caddy
+docker compose pull
+docker compose down
+docker compose up -d
+```
