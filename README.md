@@ -20,3 +20,16 @@ docker compose pull
 docker compose down
 docker compose up -d
 ```
+
+## Automations
+
+### New Member
+
+On new Airtable Members, create a discord message to the pipeline and add a volunteer role.
+
+_This is disabled, as we use Airtable to send summaries to chapter leads. The volunteer role doesn't work because [we need Discord IDs](https://github.com/PauseAI/n8n-automations/issues/1)._
+
+### Netlify Build
+
+Creates a message on build fails in #software-updates.
+
