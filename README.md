@@ -12,6 +12,13 @@ We used to use Zapier, but migrated to n8n early 2025.
 
 ### Upgrading n8n
 
+There's a cronjob running:
+
+```
+0 3 * * * cd /opt/n8n-docker-caddy && docker compose pull && docker compose down && docker compose up -d >> /var/log/n8n-update.log 2>&1
+```
+
+If that fails, this is the manual process:
 Log in to [the droplet console](https://cloud.digitalocean.com/droplets/502581104/graphs?i=4e6187&period=hour) and execute these commands: 
 
 ```sh
